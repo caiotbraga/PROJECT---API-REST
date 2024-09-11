@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import med.voll.api.DTO.AddressDto;
+import med.voll.api.DTO.DoctorDto;
 
 @Embeddable
 @Getter
@@ -20,4 +22,13 @@ public class Address {
   private String state;
   private String postalCode;
 
+  public Address(AddressDto data) {
+    this.city = data.city();
+    this.complement = data.complement();
+    this.neighborhood = data.state();
+    this.number = data.number();
+    this.postalCode = data.postalCode();
+    this.publicPlace = data.publicPlace();
+    this.state = data.state();
+  }
 }

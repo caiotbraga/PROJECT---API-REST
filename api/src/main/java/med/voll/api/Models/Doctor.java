@@ -2,6 +2,7 @@ package med.voll.api.Models;
 
 import jakarta.persistence.*;
 import lombok.*;
+import med.voll.api.DTO.DoctorDto;
 import med.voll.api.Enums.Specialty;
 
 @Table(name = "Doctors")
@@ -24,5 +25,11 @@ public class Doctor {
   @Embedded
   private Address address;
 
-
+  public Doctor(DoctorDto data) {
+    this.name = data.name();
+    this.address = new Address(data.address());
+    this.crm = data.crm();
+    this.email = data.email();
+    this.specialty = data.specialty();
+  }
 }

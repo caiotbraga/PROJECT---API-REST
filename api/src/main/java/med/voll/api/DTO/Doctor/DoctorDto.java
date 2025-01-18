@@ -1,7 +1,8 @@
-package med.voll.api.DTO;
+package med.voll.api.DTO.Doctor;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
+import med.voll.api.DTO.AddressDto;
 import med.voll.api.Enums.Specialty;
 
 public record DoctorDto(
@@ -25,7 +26,6 @@ public record DoctorDto(
     Specialty specialty,
 
     @NotNull
-    @Valid
-    AddressDto address
+    @Valid AddressDto address
 ) {
 }

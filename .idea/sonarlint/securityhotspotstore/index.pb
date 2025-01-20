@@ -1,8 +1,6 @@
 
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-a
-1api/src/main/java/med/voll/api/DTO/DoctorDto.java,1\3\139f3d44b9d43f56bbf8cec3b2a190c0d29f6e9b
 o
 ?api/src/main/java/med/voll/api/Controller/MedicoController.java,a\e\aec35dfa2e637b2c128dbee11ed03bc0d86b8ac6
 c
@@ -11,8 +9,6 @@ b
 2api/src/main/java/med/voll/api/DTO/AddressDto.java,a\a\aa9b720334a6f5cd7cedca5dc80daee2774858f6
 ;
 api/pom.xml,f\e\fe5c43214168bd8de1d8afa275215a8e9b9de634
-b
-2api/src/main/java/med/voll/api/DTO/DoctorList.java,1\9\1986e4893b68ca2b3434565f81823c2f78abbe94
 i
 9api/src/main/java/med/voll/api/DTO/Doctor/DoctorList.java,b\9\b96cf927c04c70954bc1a253f18a1594c3520f4f
 k
@@ -25,3 +21,5 @@ a
 1api/src/main/java/med/voll/api/Models/Doctor.java,1\8\18d27ae3fbe136479963ea9efcbd316a0059ccda
 b
 2api/src/main/java/med/voll/api/Models/Address.java,b\a\ba7a836381147d34edbdc59f486f5f4a367ae85e
+k
+;api/src/main/java/med/voll/api/DTO/Doctor/DoctorDetail.java,5\b\5bf7cb75ff614fa825200bcbb7d488225fbb8d00

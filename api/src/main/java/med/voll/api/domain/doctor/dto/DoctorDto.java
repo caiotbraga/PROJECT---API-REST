@@ -3,7 +3,7 @@ package med.voll.api.domain.doctor.dto;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import med.voll.api.domain.address.AddressDto;
-import med.voll.api.Enums.Specialty;
+import med.voll.api.domain.Enums.Specialty;
 
 public record DoctorDto(
 

@@ -1,6 +1,6 @@
 package med.voll.api.domain.doctor.dto;
 
-import med.voll.api.Enums.Specialty;
+import med.voll.api.domain.Enums.Specialty;
 import med.voll.api.domain.address.Address;
 import med.voll.api.domain.doctor.Doctor;
 

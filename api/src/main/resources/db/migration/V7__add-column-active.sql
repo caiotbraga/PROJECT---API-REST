@@ -1,2 +1,2 @@
-ALTER TABLE patient
+ALTER TABLE patients
 ADD COLUMN active tinyint;

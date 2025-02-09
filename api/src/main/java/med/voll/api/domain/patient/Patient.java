@@ -9,7 +9,7 @@ import med.voll.api.domain.patient.dto.PatientDto;
 import med.voll.api.domain.patient.dto.UpdatePatient;
 import med.voll.api.domain.person.Person;
 
-@Table(name = "patient")
+@Table(name = "patients")
 @Entity(name = "Patient")
 @Getter
 @NoArgsConstructor

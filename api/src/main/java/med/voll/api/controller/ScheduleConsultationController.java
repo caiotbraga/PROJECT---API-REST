@@ -28,8 +28,8 @@ public class ScheduleConsultationController {
   @PostMapping("/toSchedule")
   @Transactional
   public ResponseEntity scheduleConsultation(@RequestBody @Valid ScheduleConsultationData data){
-    scheduleConsultation.toSchedule(data);
-    return ResponseEntity.ok().build();
+    var scheduleConsultationInfo = scheduleConsultation.toSchedule(data);
+    return ResponseEntity.ok(scheduleConsultationInfo);
   }
 
   @PostMapping("/cancel")

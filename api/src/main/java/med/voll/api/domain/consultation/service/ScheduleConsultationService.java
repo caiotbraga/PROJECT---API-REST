@@ -3,6 +3,7 @@ package med.voll.api.domain.consultation.service;
 import med.voll.api.domain.consultation.ScheduleConsultation;
 import med.voll.api.domain.consultation.ScheduleConsultationRepository;
 import med.voll.api.domain.consultation.dto.ScheduleConsultationData;
+import med.voll.api.domain.consultation.dto.ScheduleConsultationInfo;
 import med.voll.api.domain.doctor.Doctor;
 import med.voll.api.domain.doctor.DoctorRepository;
 import med.voll.api.domain.patient.PatientRepository;
@@ -22,7 +23,7 @@ public class ScheduleConsultationService {
   @Autowired
   ScheduleConsultationRepository scheduleConsultationRepository;
 
-  public void toSchedule(ScheduleConsultationData data) {
+  public ScheduleConsultationInfo  toSchedule(ScheduleConsultationData data) {
     if(!patientRepository.existsById(data.patientId())){
       throw new ValidateDataException("Patient id do not exists!");
     }
@@ -33,7 +34,9 @@ public class ScheduleConsultationService {
 
     var patient = patientRepository.getReferenceById(data.patientId());
     var doctor = chooseDoctor(data);
-    scheduleConsultationRepository.save(new ScheduleConsultation(null, patient, doctor, data.date()));
+    var consultation = new ScheduleConsultation(null, patient, doctor, data.date());
+    scheduleConsultationRepository.save(consultation);
+    return new ScheduleConsultationInfo(consultation);
   }
 
   private Doctor chooseDoctor(ScheduleConsultationData data) {

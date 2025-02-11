@@ -18,3 +18,4 @@ public record ScheduleConsultationData(
     @Future
     LocalDateTime date) {
 }
+

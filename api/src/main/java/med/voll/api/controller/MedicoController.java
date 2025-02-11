@@ -30,7 +30,7 @@ public class MedicoController {
     Doctor doctor = new Doctor(doctorData);
     repository.save(doctor);
     var uri = uriComponentsBuilder.path("/doctor/register/{id}").buildAndExpand(doctor.getId()).toUri();
-    return ResponseEntity.created(uri).body(doctorData);
+    return ResponseEntity.created(uri).body(new DoctorDetail(doctor));
   }
 
   @GetMapping("/list")

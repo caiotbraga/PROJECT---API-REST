@@ -56,7 +56,7 @@ class MedicoControllerTest {
   }
 
   @Test
-  @DisplayName("Must return status 200 when all data is valid")
+  @DisplayName("Must return status 201 when all data is valid")
   void doctorRegisterScenario02() throws Exception {
     var registerData = new DoctorDto(
         "Medico",
